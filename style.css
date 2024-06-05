@@ -19,7 +19,16 @@ body {
    
       
 }
-
+header {
+    
+    background-color: rgb(219, 219, 219);
+    color: #000000; 
+    text-align: left; 
+    padding: 40px ; 
+    margin-bottom: 10%;
+    margin-top: 10%;
+    grid-area: B;
+}
 nav{
     padding: 10px 0; 
     margin: 0; 
@@ -43,16 +52,7 @@ nav ul li a {
     
     
 }
-header {
-    
-    background-color: rgb(219, 219, 219);
-    color: #000000; 
-    text-align: left; 
-    padding: 40px ; 
-    margin-bottom: 10%;
-    margin-top: 10%;
-    grid-area: B;
-}
+
 
 h1{
     text-align: center;
@@ -111,22 +111,23 @@ section#projects {
     grid-area:  G;
     
 }
-/*aside{
-display: flex;
-flex-direction: column;
-background-color: #6992b1;
-grid-area: K;
-width: 50px;
-justify-content: flex-end;
-gap: 20px;
-padding-bottom: 20px;
-align-items: center;
-}
-.socialicon {
-    width: 30px;
-    height: auto;
-    
-}*/
+aside{
+    display: flex;
+    flex-direction: column;
+
+    grid-area: K;
+    width: 50px;
+    justify-content:center;
+    gap: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    }
+    .icon {
+        width: 30px;
+        height: auto;
+        
+        
+    }
 footer{
     
     justify-items: center;
@@ -141,87 +142,99 @@ footer{
     grid-area: D;
     position: relative;
 }
-@media   (min-width: 768px) and (max-width: 1023px) {
-nav{
-    padding: 5px ; 
-    margin: 0; 
-    position: fixed;
-    width: 100%;
-    height: 3%;
-    grid-area: A;
-    text-align: center; 
 
-      }
-        .container {
+@media   (min-width: 768px) and (max-width: 1023px) {
+   
+    #container {
             grid-template-columns: 1fr;
+            grid-template-rows: 10% auto 70% 5% 5%;
             grid-template-areas: 
             "A" 
             "B" 
             "C"
+            "K"
             "D";
         }
-        main {
+    header {
+            padding: 20px;
+          
+        }
+    nav{
+            padding: 5px ;
+            height: auto;
+
+        }
+    main {
             grid-template-columns: 1fr;
             grid-template-areas:
              "E"
              "F"
              "G";
         }    
-    }
-
+    
     section {
         margin: 10px;
+        width: auto;
     }
-     
-footer{
-    
-    
-    justify-items: center;
-    align-items: center;
-    background-color: #222; 
-    color: #fff; 
-    text-align: center; 
-    padding: 10px 0; 
-    width: 100%; 
-    height: auto;
-    bottom: 0; 
-    grid-area: D;}
+     h1 {
+        font-size: 60px;
+    }
 
+    h2 {
+        font-size: 40px;
+    }
+    aside {
+        display: flex;
+        width: 100%;       
+        justify-content:center;
+        height: 70px;
+        flex-direction: row;
+        position:static;
+        justify-content: center;
+    }    
+   
+    footer{
 
-@media (max-width: 767px) and (min-width:200px){
-    nav{
+        width: 100%; 
+        height: auto; 
+        grid-area: D;}
+        }
+@media only screen and (max-width: 767px) {
+    body{
+        padding: 0%;
+    }
+    #container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 10% auto 60% 5% 5%;
+            grid-template-areas: "A" "B" "C" "K" "D"
+        }
+    header {
+            text-align: center;
+            height: 80vh;
+            align-items: center;
+            
+           
+        }
+    nav {
         height:auto;
-        width:100%;
 
-    }
+        }
     nav ul {
         flex-direction: column;
     }
-
-    header {
-        text-align: center;
-    }
-
-        .container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 10% 20% 60% 20px;
-            grid-template-areas: "A" "B" "C" "D"
-           
-        }
     main {
-    
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
         "E"
         "F"
         "G" ;
-        margin: 0;
+        margin: 20px 0;
         padding: 10px;
     }
-
     section {
-        margin: 10px;
+    
+        padding: 10px;
     }
 
     h1 {
@@ -231,6 +244,16 @@ footer{
     h2 {
         font-size: 40px;
     }
+    aside {
+        display: flex;
+        width: 100%;       
+        justify-content:center;
+        height: 70px;
+        flex-direction: row;
+        position:static;
+        justify-content: center;
+    }    
+   
     footer{
         
         justify-items: center;
@@ -240,51 +263,6 @@ footer{
         text-align: center; 
         padding: 10px 0; 
         grid-area: D;
-        height: auto;}
+        height: auto;
     }
-
-@media (max-width: 1024px) and (min-width:768px){
-
-    nav{
-        height:auto;
-        width:100%;
-        
     }
-    header {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-areas: "A" "B" "C" "D";
-    }
-    main {
-        grid-template-columns: 1fr;
-        grid-template-areas: "E" "F" "G"
-
-   
-    
-}
-footer{
-    height:auto;
-    position:static;
-}
-}
-
-
-/*@media only screen  (min-height: 800px) and (max-height: 1023px) {
-    footer{
-        height:auto;
-
-
-    }
-
-}*/
