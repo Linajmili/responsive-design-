@@ -13,14 +13,10 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-template-areas:
-    "A A A"
-    "B B B"
-    "C C C"
-    "D D D";
-    max-height: 100vh;
+    "A A A" "K B B" "K C C" "D D D";
+   
       
 }
 
@@ -118,14 +114,12 @@ section#projects {
 /*aside{
 display: flex;
 flex-direction: column;
-
-background-color: #513953;
-grid-area: H;
+background-color: #6992b1;
+grid-area: K;
 width: 50px;
 justify-content: flex-end;
 gap: 20px;
 padding-bottom: 20px;
-
 align-items: center;
 }
 .socialicon {
@@ -145,6 +139,7 @@ footer{
     height:auto;
     bottom: 0; 
     grid-area: D;
+    position: relative;
 }
 @media   (min-width: 768px) and (max-width: 1023px) {
 nav{
@@ -177,9 +172,7 @@ nav{
     section {
         margin: 10px;
     }
-      section#projects{
-        margin-bottom:20%;
-      }
+     
 footer{
     
     
@@ -242,7 +235,6 @@ footer{
         
         justify-items: center;
         align-items: center;
-        position: fixed;
         background-color: #222; 
         color: #fff; 
         text-align: center; 
@@ -283,6 +275,7 @@ footer{
 }
 footer{
     height:auto;
+    position:static;
 }
 }
 
@@ -294,4 +287,4 @@ footer{
 
     }
 
-}
+}*/
